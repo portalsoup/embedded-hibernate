@@ -5,7 +5,7 @@ import com.portalsoup.minimalhibernate.entity.User;
 
 import java.util.List;
 
-public class MainHibernate {
+public class Main {
     public static void main(String[] args) {
         UserDao userDao = new UserDao();
         User user = new User("John");
