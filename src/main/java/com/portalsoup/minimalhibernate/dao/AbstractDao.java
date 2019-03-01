@@ -1,7 +1,6 @@
 package com.portalsoup.minimalhibernate.dao;
 
-import com.portalsoup.minimalhibernate.HibernateUtil;
-import com.portalsoup.minimalhibernate.entity.User;
+import com.portalsoup.minimalhibernate.util.HibernateUtil;
 import com.portalsoup.minimalhibernate.util.Generics;
 import com.portalsoup.minimalhibernate.util.TriFunction;
 import org.hibernate.Session;
@@ -13,7 +12,6 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
-import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 

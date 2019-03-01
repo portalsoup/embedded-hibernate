@@ -1,4 +1,4 @@
-package com.portalsoup.minimalhibernate;
+package com.portalsoup.minimalhibernate.util;
 
 import com.portalsoup.minimalhibernate.entity.DiscoverableEntity;
 import org.hibernate.SessionFactory;
