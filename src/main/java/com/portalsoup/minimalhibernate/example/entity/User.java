@@ -1,4 +1,6 @@
-package com.portalsoup.minimalhibernate.entity;
+package com.portalsoup.minimalhibernate.example.entity;
+
+import com.portalsoup.minimalhibernate.entity.DiscoverableEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
-public class User extends AbstractEntity {
+public class User extends DiscoverableEntity {
 
     @Column
     private String name;

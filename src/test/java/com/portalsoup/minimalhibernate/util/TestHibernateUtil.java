@@ -10,7 +10,7 @@ import org.reflections.Reflections;
 
 import java.util.Properties;
 
-public class HibernateUtil {
+public class TestHibernateUtil extends HibernateUtil {
 
     protected static SessionFactory sessionFactory;
 
@@ -21,8 +21,8 @@ public class HibernateUtil {
 
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "org.h2.Driver");
-                settings.put(Environment.URL, "jdbc:h2:./database/app");
-                settings.put(Environment.USER, "app");
+                settings.put(Environment.URL, "jdbc:h2:./database/test");
+                settings.put(Environment.USER, "ci");
                 settings.put(Environment.PASS, "");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.H2Dialect");
 
@@ -42,6 +42,12 @@ public class HibernateUtil {
             }
         }
         return sessionFactory;
+    }
+
+    public static void resetDatabase() {
+        if (sessionFactory != null) {
+            sessionFactory.close();
+        }
     }
 
     private static void registerEntities(Configuration configuration) {

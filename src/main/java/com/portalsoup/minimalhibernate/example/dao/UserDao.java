@@ -1,6 +1,7 @@
-package com.portalsoup.minimalhibernate.dao;
+package com.portalsoup.minimalhibernate.example.dao;
 
-import com.portalsoup.minimalhibernate.entity.User;
+import com.portalsoup.minimalhibernate.dao.AbstractDao;
+import com.portalsoup.minimalhibernate.example.entity.User;
 
 import java.util.List;
 

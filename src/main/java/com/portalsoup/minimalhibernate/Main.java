@@ -1,16 +1,18 @@
 package com.portalsoup.minimalhibernate;
 
-import com.portalsoup.minimalhibernate.dao.UserDao;
-import com.portalsoup.minimalhibernate.entity.User;
+import com.portalsoup.minimalhibernate.example.dao.UserDao;
+import com.portalsoup.minimalhibernate.example.entity.User;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         UserDao userDao = new UserDao();
-        User user = new User("John");
+        User user1 = new User("John");
+        User user2 = new User("James");
 
-        userDao.saveUser(user);
+        userDao.saveUser(user1);
+        userDao.saveUser(user2);
 
         List<User> allUsers = userDao.getUsers();
         allUsers.stream().map(User::getName).forEach(System.out::println);
