@@ -22,6 +22,7 @@ public class AbstractDao<E> {
     public AbstractDao() {
         this.entityClass = (Class<E>) Generics.getTypeParameter(getClass());
     }
+
     protected <T> T withTransaction(Function<Session, T> supplier) {
         T returnValue;
         Transaction transaction = null;

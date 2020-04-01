@@ -45,7 +45,7 @@ public class HibernateUtil {
     }
 
     private static void registerEntities(Configuration configuration) {
-        Reflections reflections = new Reflections("com.portalsoup.minimalhibernate.entity");
+        Reflections reflections = new Reflections("com.portalsoup.minimalhibernate.example.entity");
         reflections.getSubTypesOf(DiscoverableEntity.class).stream()
                 .peek(System.out::println)
                 .forEach(configuration::addAnnotatedClass);
